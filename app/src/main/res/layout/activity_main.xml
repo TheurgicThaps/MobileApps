@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/primary"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:padding="2dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_launcher"
+                    />
+
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:text="Name of user" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary"
+                    android:src="@drawable/notifications"
+                    android:layout_marginRight="20dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:elevation="20dp"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Accounts"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"/>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/txtCurrentBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text="R100000"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        />
+
+                    <Button
+                        android:id="@+id/btnCurrent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00FFFFFF"
+                        android:gravity="left"
+                        android:padding="0dp"
+
+
+                        android:text="Current Account" />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow"
+                        android:layout_gravity="right|center_vertical"
+                        />
+
+
+                </FrameLayout>
+
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+
+                    android:background="@color/white" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <Button
+                        android:id="@+id/btnSavings"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Savings Account"
+                        android:padding="0dp"
+                        android:gravity="left"
+                        android:backgroundTint="@color/primary"
+                        android:background="#00FFFFFF"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtSavingsBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text="R100000"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow"
+                        android:layout_gravity="right|center_vertical"
+                        />
+
+
+                </FrameLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/black"
+            android:backgroundTint="#41040404" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            >
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="30dp"
+                >
+
+                <ImageButton
+                    android:id="@+id/btnAirtime"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="@color/secondary"
+                    android:elevation="20dp"
+                    android:outlineSpotShadowColor="@color/black"
+
+                    android:src="@drawable/sim_cards" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Buy Airtime"
+                    android:gravity="center"/>
+
+
+                <ImageButton
+                    android:id="@+id/btnTransfer"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="30dp"
+                    android:elevation="20dp"
+                    android:backgroundTint="@color/secondary"
+
+                    android:outlineSpotShadowColor="@color/black"
+
+                    android:src="@drawable/exchange"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Transfer"
+                    android:gravity="center"/>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="30dp"
+                >
+
+                <ImageButton
+                    android:id="@+id/btnElectric"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:elevation="20dp"
+                    android:backgroundTint="@color/secondary"
+                    android:src="@drawable/plug_circle_bolt"
+                    android:outlineSpotShadowColor="@color/black"
+
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Buy Electricity"
+                    android:gravity="center"/>
+
+
+                <ImageButton
+                    android:id="@+id/btnPay"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="@color/secondary"
+                    android:background="@color/primary"
+                    android:elevation="20dp"
+                    android:foregroundTint="#E71D1D"
+                    android:outlineSpotShadowColor="@color/black"
+
+                    android:src="@drawable/wallet_arrow" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+
+                    android:text="Pay beneficiary"
+                    android:gravity="center"/>
+
+
+
+            </LinearLayout>
+
+
+
+
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/black"
+            android:backgroundTint="#41040404" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:elevation="10dp"
+            android:orientation="horizontal"
+
+            >
+            <ImageButton
+                android:id="@+id/btnHome"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/blackhome"
+                android:background="@color/white"
+
+
+                />
+            <ImageButton
+                android:id="@+id/btnTransact"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/transact"
+                android:background="@color/white"
+
+
+                />
+            <ImageButton
+                android:id="@+id/btnMore"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/menu_dots"
+                android:layout_gravity="center"
+                android:background="@color/white"
+
+
+                />
+
+
+
+
+        </TableRow>
+
+
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
